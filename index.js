@@ -2,7 +2,9 @@
 var argumentIsPositiveInteger = require('./argumentIsPositiveInteger');
 var getPrimes = require('./getPrimes');
 var createMultiplyMatrix = require('./createMultiplyMatrix');
+var createMultiplyMatrixMultiThread = require('./createMultiplyMatrixMultiThread');
 var showGrid = require('./showGrid'); //Cant really test UI in command line which is unforunate.
+
 
 /*
  * Decided on an argument based user input, I am declaring the type below as
@@ -40,7 +42,12 @@ function main(input, pVal) {
       let multiplyMatrix = createMultiplyMatrix(primeList);
       showGrid(primeList, multiplyMatrix); // outputs the grid in nice form
     } else {
-      //TODO: multi-process version. Create a worker file, have a promise here and chunk in another module
+      //Need async function to get a promise from the async threads in the createMultiplyMatrixMultiThread module. Its very messy!!
+      async function getChunkedMultiplyMatrix() {
+         let multiplyMatrix = await createMultiplyMatrixMultiThread(primeList, pVal);
+         showGrid(primeList, multiplyMatrix);
+      }
+      getChunkedMultiplyMatrix();
     }
 
     //TODO: Show the grid
