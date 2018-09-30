@@ -5,16 +5,20 @@ The program uses a single process and multiprocess approach for less than or equ
 
 ## Getting started:
 
-You must have node and npm (latest versions would be best)
+You must have node and npm (latest versions would be best).
 
-Clone the project i.e. git clone <url>
+Clone the project
+
 go to project directory i.e. cd primeTables
+
 npm install
 
-To run the tests:
+###To run the tests:
+
 npm test
 
-To run the program:
+###To run the program:
+
 If you want less than or equal to 10000 primes to be multiplied into a matrix then;
 
 node index --primes=10
