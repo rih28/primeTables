@@ -16,7 +16,7 @@ function createMultiplyMatrix(primeList) {
     });
     grid.push(newArray);
   }
-  console.log((Date.now()-t2));
+  //console.log((Date.now()-t2));
   return grid;
 }
 

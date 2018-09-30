@@ -44,7 +44,7 @@ function getPrimes(pVal) {
     }
     i++; //update the increment
   }
-  console.log((Date.now()-t1)); //50000 takes about 20s which is a long time. I highlighted in the comments the restrictions and methods to resolve this. C++ add-on would likely increase performance in one thread.
+  //console.log((Date.now()-t1)); //50000 takes about 20s which is a long time. I highlighted in the comments the restrictions and methods to resolve this. C++ add-on would likely increase performance in one thread.
   return primeArray;
 }
 

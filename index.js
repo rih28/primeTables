@@ -25,7 +25,7 @@ const prime = options.primes;
 
 //check whether prime is a positive integer or not and return a boolean
 const inp = argumentIsPositiveInteger(prime)
-console.log(inp);
+//console.log(inp);
 main(inp, prime);
 
 /*
@@ -45,12 +45,10 @@ function main(input, pVal) {
       //Need async function to get a promise from the async threads in the createMultiplyMatrixMultiThread module. Its very messy!!
       async function getChunkedMultiplyMatrix() {
          let multiplyMatrix = await createMultiplyMatrixMultiThread(primeList, pVal);
-         showGrid(primeList, multiplyMatrix);
+         showGrid(primeList, multiplyMatrix); // outputs the grid in nice form
       }
-      getChunkedMultiplyMatrix();
+      getChunkedMultiplyMatrix(); //Run the async function with promise getChunkedMultiplyMatrix
     }
-
-    //TODO: Show the grid
   } else {
     console.log("User input must be a positive integer i.e. 25, 2, 25000");
   }
