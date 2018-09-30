@@ -1,6 +1,7 @@
 //include the tested argumentIsPositiveInteger function
 var argumentIsPositiveInteger = require('./argumentIsPositiveInteger');
 var getPrimes = require('./getPrimes');
+var createMultiplyMatrix = require('./createMultiplyMatrix');
 
 /*
  * Decided on an argument based user input, I am declaring the type below as
@@ -33,8 +34,14 @@ function main(input, pVal) {
   if (input) {
     console.log("Thank you :)");
     const primeList = getPrimes(pVal);
-    //console.log(primeList);
-    //TODO: create a multiply matrix
+
+    if (pVal <= 1000) {
+      let multiplyMatrix = createMultiplyMatrix(primeList);
+      console.log(multiplyMatrix);
+    } else {
+      //TODO: multi-process version. Create a worker file, have a promise here and chunk in another module
+    }
+
     //TODO: Show the grid
   } else {
     console.log("User input must be a positive integer i.e. 25, 2, 25000");

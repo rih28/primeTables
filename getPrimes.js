@@ -10,7 +10,7 @@
  * The other method is to use C++ Add-ons for real multithreaded computing but this
  * is outside the scope
  * @param {number} pVal
- * @return {Array}
+ * @return {Array} primeArray
  */
 
 function getPrimes(pVal) {
