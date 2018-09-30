@@ -23,3 +23,9 @@ If you want more than 10000 primes (I have not tested an upper limit but 30000 s
 
 node --max_old_space_size=8000 index --primes=20000
 
+##what you’re pleased with? 
+I was very happy with my application of the process and how quickly I managed to obtain a solid algorithm. I like my child process attempt, however, I am not certain it has resolved the issue properly. 
+
+##What you would do with it if you had more time?
+I decided to utilise the command-line. This was probably not the best solution and perhaps caused the memory leak issues. Also, I would probably utilise C++ Add-ons for the number crunching.
+
