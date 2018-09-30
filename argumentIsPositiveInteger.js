@@ -6,7 +6,20 @@
  */
 
 function argumentIsPositiveInteger(prime) {
-  return false;
+  //This has flaws!
+  if (isNaN(prime)) {
+    return false;
+  } else {
+    if (Number.isInteger(prime)) {
+      if (prime < 0) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
 }
 
 module.exports = argumentIsPositiveInteger;

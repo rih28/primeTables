@@ -1,10 +1,40 @@
+//include the tested argumentIsPositiveInteger function
+var argumentIsPositiveInteger = require('./argumentIsPositiveInteger');
 
-//From the description:
-//TODO: Make sure the argument is a positive integer
-//TODO: get a list of primes
-//TOOD: create a multiply matrix
-//TODO: Show the grid
+/*
+ * Decided on an argument based user input, I am declaring the type below as
+ * For example: node index --primes=10 runs the program with the argument 10
+ * This method has clear flaws i.e. using " as an argument can't be resolved
+ */
+const optionDefinitions = [
+  { name: 'primes', alias: 'p', type: Number }
+]
 
-function main() {
-  //TODO: main function to run the program
+const commandLineArgs = require('command-line-args'); //for using command line user input
+const options = commandLineArgs(optionDefinitions); //declaring options for command line user input
+
+
+//get the user input from the argument. options returns an object, for example { primes: 10 }
+//please note, blank returns 0 as the type is declared as Number in the optionDefinitions
+const prime = options.primes;
+
+//check whether prime is a positive integer or not and return a boolean
+const inp = argumentIsPositiveInteger(prime)
+console.log(inp);
+main(inp, prime);
+
+/*
+ * Runs the main program
+ * @param {boolean} inp
+ * @param {number} prime
+ */
+function main(input, prime) {
+  if (input) {
+    console.log("Thank you :)");
+    //TODO: get a list of primes
+    //TODO: create a multiply matrix
+    //TODO: Show the grid
+  } else {
+    console.log("User input must be a positive integer i.e. 25, 2, 25000");
+  }
 }
