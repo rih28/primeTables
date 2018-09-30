@@ -1,5 +1,6 @@
 //include the tested argumentIsPositiveInteger function
 var argumentIsPositiveInteger = require('./argumentIsPositiveInteger');
+var getPrimes = require('./getPrimes');
 
 /*
  * Decided on an argument based user input, I am declaring the type below as
@@ -28,10 +29,11 @@ main(inp, prime);
  * @param {boolean} inp
  * @param {number} prime
  */
-function main(input, prime) {
+function main(input, pVal) {
   if (input) {
     console.log("Thank you :)");
-    //TODO: get a list of primes
+    const primeList = getPrimes(pVal);
+    //console.log(primeList);
     //TODO: create a multiply matrix
     //TODO: Show the grid
   } else {
