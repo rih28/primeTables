@@ -1,6 +1,7 @@
 var assert = require('assert');  //for mocha unit testing framework
 var argumentIsPositiveInteger = require('../argumentIsPositiveInteger');
 var getPrimes = require('../getPrimes');
+var createMultiplyMatrix = require('../createMultiplyMatrix');
 
 //Create a test collection for the user input
 describe('UserInput', function() {
@@ -63,4 +64,24 @@ describe('GetPrimes', function() {
   });
 });
 
-//TODO: Test Multiply Matrix
+//Create a test collection for creating multiplied primes grid
+describe('MultiplicationGrid', function() {
+  describe('#CheckMultiplicationGrid', function() {
+    //Tests dimensionality of the rows i.e. equal to the number of primes
+    it('should return true when row dimensionality is tested', function() {
+      assert.equal(createMultiplyMatrix([2, 3, 5])[0].length, 3);
+    });
+  });
+  describe('#CheckMultiplicationGrid', function() {
+    //Tests dimensionality of the columns i.e. equal to the number of primes
+    it('should return true when column dimensionality is tested', function() {
+      assert.equal(createMultiplyMatrix([2, 3, 5, 7]).length, 4);
+    });
+  });
+  describe('#CheckMultiplicationGrid', function() {
+    //Tests the final value at point x_nn to check it is the final prime squared.
+    it('should return a true when node at position nn is tested as the square of the nth prime', function() {
+      assert.equal(createMultiplyMatrix([2,3,5])[2][2], 25);
+    });
+  });
+});
