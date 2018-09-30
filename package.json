@@ -1,0 +1,28 @@
+{
+  "name": "primetables",
+  "version": "1.0.0",
+  "description": "A program that takes a positive integer n, creates a list of n prime numbers, multiplies the list by its itself (i.e. v.v') to create an n by n grid and finally displays the output with an additional row and column of the initial primes.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rih28/primeTables.git"
+  },
+  "keywords": [
+    "prime"
+  ],
+  "author": "rih28",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rih28/primeTables/issues"
+  },
+  "homepage": "https://github.com/rih28/primeTables#readme",
+  "dependencies": {
+    "command-line-args": "^5.0.2"
+  }
+}
